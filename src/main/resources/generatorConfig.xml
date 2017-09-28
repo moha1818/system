@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <properties resource="jdbc.properties"/>
+    <classPathEntry
+            location="E:\apache-maven-3.3.9-bin\apache-maven-3.3.9\jar\org\mybatis\mybatis\3.2.8\mybatis-3.2.8.jar"/>
+    <context id="my" targetRuntime="MyBatis3">
+
+
+        <!--<plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="com.gttown.common.support.mybatis.MybatisMysqlMapper"/>
+        </plugin>-->
+
+        <jdbcConnection driverClass="${driver}" connectionURL="${url}"
+                        userId="${name}" password="${password}"/>
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="true"/>
+        </javaTypeResolver>
+        <javaModelGenerator targetPackage="com.moha.demo.entity"
+                            targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="mapping"
+                         targetProject="src/main/resources/">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <javaClientGenerator targetPackage="com.moha.demo.dao"
+                             targetProject="src/main/java/"
+                             type="XMLMAPPER">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+
+        <!-- 参考配置    http://mbg.cndocs.tk/ -->
+        <table tableName="demo" enableCountByExample="false" enableDeleteByExample="false"
+               enableDeleteByPrimaryKey="false" enableInsert="false" enableSelectByExample="false"
+               enableUpdateByExample="false" enableUpdateByPrimaryKey="false">
+            <property name="useActualColumnNames" value="true"/>
+        </table>
+    </context>
+</generatorConfiguration>
