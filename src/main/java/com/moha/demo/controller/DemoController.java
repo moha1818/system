@@ -1,6 +1,10 @@
 package com.moha.demo.controller;
 
 import com.moha.demo.entity.View;
+import com.moha.demo.service.DemoService;
+import com.moha.demo.threadpool.StartTaskThread;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +17,9 @@ import java.util.List;
 @Controller
 @RequestMapping("/demo")
 public class DemoController {
+    @Autowired
+    private DemoService demoService;
+
     @RequestMapping("show")
     public String demo(){
         return "/index";
@@ -42,4 +49,16 @@ public class DemoController {
 
         return 1;
     }
+
+
+    @ResponseBody
+    @RequestMapping(value = "tms",method = RequestMethod.GET)
+    public int vss(Integer[] id){
+        demoService.ser();
+        return 1;
+    }
+
+
+
+
 }
