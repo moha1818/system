@@ -11,7 +11,7 @@ public class DemoServiceImpl implements DemoService{
 
     private static int produceTaskSleepTime = 10;
 
-    private static int produceTaskMaxNumber = 1000;
+    private static int produceTaskMaxNumber = 100;
 
     @Autowired
     private ThreadPoolTaskExecutor threadPoolTaskExecutor;
@@ -37,6 +37,7 @@ public class DemoServiceImpl implements DemoService{
 
     }
 
+    @Override
     public void ser(){
         testThreadPoolExecutor();
     }
