@@ -1,0 +1,30 @@
+
+	#top{
+		margin:25px 0 0 15px;
+		padding:5px 10px;
+		border:1px #EFEFEF solid;
+		height:80px;
+		width:960px;
+		font-size:14px;
+	}
+	#foot{
+		margin:15px 0 0 15px;
+		padding:5px 10px;
+		border:1px #EFEFEF solid;
+		height:360px;
+		width:960px;
+		font-size:14px;
+	}
+	table{
+		width:960px
+	}
+	td{
+		padding:4px 0 4px 0;
+		line-height:20px;
+	}
+	.red{
+		color:#ff0000
+	}
+	.gray{
+		background-color:#EFEFEF
+	}

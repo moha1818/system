@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document
+app renew
+ */
+body{
+	font-size:14px;}
+h3{
+	font-weight:bold; text-align:center;}
+#sub{
+	text-align:center;
+	}
+#head{
+	margin:10px 20px;
+	}
+.bordered{
+	border:#CCC 1px solid;width:450px;height:200px;
+	}
+table td{padding:5px 10px;
+	}

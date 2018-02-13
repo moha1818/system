@@ -1,0 +1,69 @@
+/* created by laohuangsk8 2016-04
+ * boss系统全局css
+ */
+
+/* zui css 覆盖重写 start*/
+.table{margin-bottom: 0;}
+/* zui css 覆盖重写 end*/
+
+body{min-width: 1400px;}
+a{ background: #fff;}
+a:focus{ outline:none; } 
+
+.display{ display:none}
+.t-right{ text-align: right;}
+
+
+
+
+
+/*
+ * drop-menu 响应式 页面宽度低于一定值后左侧菜单缩小为一个图标，点击弹出
+ */
+.drop-menu{ display: none; z-index:2; position: fixed; left: 10px; top:56px;}
+.drop-menu i{ font-size: 30px;}
+.drop-menu a{ text-decoration: none;}
+
+.main-container{position: static; display: block; width: 100%; padding-top: 50px;}
+
+.top-user{ position: fixed; min-height: 50px;padding-top:5px;background: #438eb9; width: 100%;z-index: 2;}
+.top-user .logo{ float: left; width: 200px; margin-left: 30px;}
+.top-user .combo{ display: inline-block; float: right; margin-right: 10px;}
+.top-user .combo .nav>li>a{ width: 160px; height: 40px;}
+.top-user .combo .nav .dropdown-menu{ top:46px;}
+
+.side-menu{position: fixed;top:50px;height: 100%; width:200px;min-width: 200px; border-right: 1px solid #ddd; background: #fff;}
+
+.menu > .nav > li.nav-heading:first-child, .menu > .nav > li:first-child > a{border-radius: 0;}
+.menu > .nav > li > .nav > li > a{ border-right: 0; }
+.side-menu .menu a{ border-right: 0;}
+
+.main-content{min-width: 1200px; min-height:500px; margin-left: 200px;}
+.page-content{padding: 20px 20px;}
+
+.breadcrumb{ border-bottom: 1px solid #ddd;border-radius: 0; padding-top: 9px;}
+
+
+@media screen and (max-width: 1200px) {
+	.drop-menu{ display: block;}
+	.side-menu{ display: none;top: 90px;}
+	.side-menu.display{ display: block;top: 87px; z-index: 100;}
+	.main-content{ margin-left: 0;}
+	.breadcrumb{ padding-left: 50px;}
+}
+@media screen and (min-width: 1200px) {
+	.drop-menu{ display: none;}
+	.side-menu{ display: block;}
+	.side-menu.display{ display: block;top: 50px;}
+	.main-content{ margin-left: 200px; margin-top: 0;}
+}
+
+
+
+
+
+
+
+
+
+

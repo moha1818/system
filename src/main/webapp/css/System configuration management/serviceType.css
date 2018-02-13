@@ -1,0 +1,79 @@
+.hr_head {
+	background-color: #F0F0F0;
+}
+
+table {
+	float: left;
+	border-collapse: collapse;
+	font-size: 14px;
+}
+
+table, td {
+	border: 1px solid #C4C4C4;
+}
+
+td {
+	text-align: center;
+	height: 34px;
+}
+
+.table2 {
+	border: none;
+	margin-left: 13px;
+}
+
+.table2 tr td {
+	border: none;
+}
+
+#td_1 {
+	width: 150px;
+}
+
+#td_2 {
+	width: 275px;
+}
+
+#td_3 {
+	width: 275px;
+}
+
+#td_4 {
+	width: 150px;
+}
+#td_5 {
+	width: 150px;
+}
+body {
+	font-family: 'trebuchet MS', 'Lucida sans', Arial;
+	color: #444;
+	height: 600px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.adduser {
+	width: 260px;
+	background-color: #E5FFE0;
+	position: absolute;
+	margin-top: 100px;
+	margin-left: 290px;
+	padding: 10px 50px;
+	border: none;
+}
+
+.title2 {
+	padding: 0 0 0 90px;
+	font-weight: bold;
+}
+
+.modify {
+	width: 330px;
+	background-color: #FFFBD8;
+	position: absolute;
+	margin-top: 125px;
+	margin-left: 260px;
+	padding: 10px 50px;
+}

@@ -1,0 +1,31 @@
+body,h2,div,table,tr,td{
+		margin:0px;
+		padding:0px;
+		font-size:12px;
+	}
+	body{
+		width:750px;
+		background-color:#ffffff;
+		
+	}
+	h2{
+		text-align:center;
+		margin:20px 0 0 0;
+	}
+	table{
+		margin:0 0 0 15px;
+		border-collapse:collapse;
+		border:1px #C4C4C4 solid;
+		text-align:center;
+	}
+	.title{
+		font-weight:bold;
+		background-color:#EFEFEF;
+	}
+	td{
+		border:1px #C4C4C4 solid;
+		line-height:25px;
+	}
+	.middle{
+		margin:10px 0 10px 15px;
+	}

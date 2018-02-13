@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ 版权所有(C) 浙江大道网络科技有限公司2011-2020
+  ~ Copyright 2009-2020 Zhejiang GreatTao Factoring Co., Ltd.
+  ~
+  ~ This software is the confidential and proprietary information of
+  ~ Zhejiang GreatTao Corporation ("Confidential Information").  You
+  ~ shall not disclose such Confidential Information and shall use
+  ~ it only in accordance with the terms of the license agreement
+  ~ you entered into with Zhejiang GreatTao
+  -->
+
+<beans
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:context="http://www.springframework.org/schema/context"
+		xmlns="http://www.springframework.org/schema/beans"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-4.1.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:component-scan base-package="com.moha.demo.utils.sendemail"></context:component-scan>
+	<context:property-placeholder location="classpath:email.properties"
+								  ignore-unresolvable="true"/>
+
+	<bean id="velocityConfig"
+		class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
+		<property name="configLocation" value="classpath:velocity.properties" />
+		<property name="resourceLoaderPath" value="/WEB-INF/velocityTemplate" />
+	</bean>
+
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="${mail.host}" />
+		<property name="port" value="${mail.port}" />
+		<property name="username" value="${mail.username}" />
+		<property name="password" value="${mail.password}" />
+		<property name="defaultEncoding" value="utf-8" />
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.smtp.ssl.trust">${mail.host}</prop>
+				<prop key="mail.smtp.auth">true</prop>
+				<prop key="mail.smtp.starttls.enable">true</prop>
+				<prop key="mail.smtp.ssl.enable">false</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="taskExecutor"
+		class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+		<property name="corePoolSize" value="10" />
+		<property name="maxPoolSize" value="30" />
+	</bean>
+
+
+</beans>

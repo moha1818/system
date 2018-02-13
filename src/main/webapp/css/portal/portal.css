@@ -1,0 +1,48 @@
+@charset "utf-8";
+  
+  body{
+  	font-size:14px;
+	width:1280px;
+	margin-left:40px;
+}
+ #top-ta{
+  	border:1px solid #CCCCCC;
+	width:1220px;
+	height:250px;
+  }
+  #mid-ta{
+  	border:1px solid #CCCCCC;
+	width:1220px;
+	height:100px;
+  }
+    #foot-ta{
+  	border:1px solid #CCCCCC;
+	width:1220px;
+	height:250px;
+  }
+  #end-ta{
+  	border:1px solid #CCCCCC;
+	width:1220px;
+	height:30px;
+	margin-bottom:20px;
+  }
+  td{
+  	width:700px;
+  }
+  tr{
+  	margin-top:20px
+  }
+  #end{
+  	height:50px;
+  }
+    #but{
+  	width:240px;
+	padding-top:20px;
+	margin-left:500px
+  }
+  #kid{
+  	display:none;
+  }
+  #bb{
+  	margin-left:500px
+  }

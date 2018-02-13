@@ -1,0 +1,17 @@
+﻿<div style="margin: 0 auto;width: 680px;margin-top: 40px;">
+    <a href="http://www.egtcp.com" target="_blank"><img
+            src="http://static.egtcp.com/static/img/logo/egtcp-red-189x49.png" alt=""/></a>
+    <div style="border: solid 1px red;padding: 20px;margin-top: 20px;">
+        <div style="padding: 50px 20px 20px 20px;color: #4F4F4F;">
+            <p>亲爱的：</p>
+            <div style="padding:0px 20px 50px 30px">
+                <p>您好！<br>您正在注册<b>eGTCP.com</b>，您的邮箱验证码为：<span style="color: red;font-size: 20px;">${emailcode}</span>。
+                </p>
+            </div>
+
+            <span style="color: #666;font-size: 12px;">注意：工作人员不会向您索取此验证码，请勿泄漏！</span>
+            <hr style="color: #999;height: 0px;border:none;border-top: 1px #999 solid;"/>
+            <span style="color: #999;font-size: 12px;">此为系统邮件，请勿回复。</span>
+        </div>
+    </div>
+</div>

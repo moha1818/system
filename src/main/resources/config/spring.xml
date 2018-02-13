@@ -90,4 +90,7 @@
             <bean class="java.util.concurrent.ThreadPoolExecutor$CallerRunsPolicy" />
         </property>
     </bean>
+
+    <import resource="classpath*:config/spring-email.xml"/>
+    <import resource="classpath*:config/spring-util.xml"/>
 </beans>

@@ -1,0 +1,16 @@
+﻿<div style="margin: 0 auto;width: 680px;margin-top: 40px;">
+    <a href="http://www.egtcp.com" target="_blank"><img
+            src="http://static.egtcp.com/static/img/logo/egtcp-red-189x49.png" alt=""/></a>
+    <div style="border: solid 1px red;padding: 20px;margin-top: 20px;">
+        <div style="padding: 5px 5px 10px 10px;color: #4F4F4F;">
+            <p>${name},您好：</p>
+            <div style="padding:20px 20px 20px 20px">#parse(${targetVM})
+            </div>
+            <p style="font-size: 10px;">如果您遇到问题，请联系我们：</p>
+            <p style="font-size: 10px;">客服热线：400-108-7979</p>
+            <p style="font-size: 10px;">邮箱地址：service@egtcp.com</p>
+            <hr style="color: #999;height: 0px;border:none;border-top: 1px #999 solid;"/>
+            <span style="color: #999;font-size: 12px;">此为系统邮件，请勿回复。</span>
+        </div>
+    </div>
+</div>

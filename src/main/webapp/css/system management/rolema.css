@@ -1,0 +1,62 @@
+body,div,table,tr,td{
+		margin:0px;
+		padding:0px;
+		font-size:14px;
+	}
+	body{
+		margin:0 0 0 220px;
+	}
+	.add{
+		margin:25px 0 8px 10px;
+	}
+    .all{
+		border-collapse:collapse;
+		border:1px #C4C4C4 solid;
+		text-align:center;
+	}
+	.title{
+		font-weight:bold;
+		background-color:#EFEFEF;
+	}
+	.all td{
+		border:1px #C4C4C4 solid;
+		line-height:25px;
+	}
+	.popup{
+		display:block;
+	}
+	.adduser{
+		width:20%;
+		border:1px #CCCCCC solid;
+		background-color:#E5FFE0;
+		position:absolute;
+		margin-top:-125px;
+		margin-left:280px;
+		padding:10px 50px;
+	}
+	.title2{
+		padding:0 0 0 90px;
+		font-weight:bold;
+
+	}
+	.modify{
+		width:260px;
+		border:1px #CCCCCC solid;
+		background-color:#FFFBD8;
+		position:absolute;
+		margin-top:-125px;
+		margin-left:280px;
+		padding:10px 50px;
+	}
+	
+	a:link{
+		text-decoration:none;
+		color:#000000;
+	}
+	a:visited{
+		color:#000000;
+	}
+	.red{
+		font-size:11px;
+		color:#f00;
+	}

@@ -1,0 +1,72 @@
+	body{
+		font-family: 'trebuchet MS', 'Lucida sans', Arial;
+		font-size: 14px;
+		width:1200px;
+		margin-left:110px;
+	}
+	.top{
+		margin-top:20px;
+		padding:15px;
+		border:1px #CCCCCC solid;
+		width:1020px;
+		margin-bottom:20px;
+		
+	}
+	.submit{
+		vertical-align:middle;
+		margin-left:10px;
+	}
+	table{
+		border-collapse:collapse;
+		border:1px #CCCCCC solid;
+		text-align:center;
+		width:1050px;
+	}
+	.title{
+		font-weight:bold;
+		background-color:#EFEFEF;
+		
+	}
+	tr,td{
+		border:1px #CCCCCC solid;
+		font-size: 14px;
+		padding: 5px;
+	}
+
+	#foot{
+		height:100px;
+	}
+a{
+	text-decoration:none;
+}
+#pager ul{
+	margin: 30px auto;
+	}
+#pager ul li a{
+	margin: 0px auto;
+	width:30px;
+	display:block; 
+	color:#000;
+}
+#pager ul li{
+	width:30px;
+	text-align:center;
+	line-height:35px;
+	BORDER-BOTTOM: #ccc 1px solid; 
+	BORDER-LEFT: #ccc 1px solid;
+	FLOAT: left; 
+	BORDER: #ccc 1px solid; 
+	list-style:none;
+}
+.page{
+	width:30px;
+}
+.pagecss{
+	width:30px;
+	background-color:  #EEEEE0;
+}
+
+#pager ul li:hover{
+	background-color:  #EEEEE0;
+	border: black 1px solid;
+}

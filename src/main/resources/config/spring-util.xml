@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-lazy-init="true"
+       xmlns="http://www.springframework.org/schema/beans"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
+
+
+    <bean class="com.moha.demo.utils.EnvUtils" init-method="init" lazy-init="false" scope="singleton">
+        <property name="locations">
+            <list>
+                <value>classpath*:/*.properties</value>
+            </list>
+        </property>
+        <property name="localOverride" value="true"/>
+    </bean>
+
+
+</beans>

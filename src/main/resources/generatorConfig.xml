@@ -38,7 +38,7 @@
 
 
         <!-- 参考配置    http://mbg.cndocs.tk/ -->
-        <table tableName="demo" enableCountByExample="false" enableDeleteByExample="false"
+        <table tableName="hat_province" enableCountByExample="false" enableDeleteByExample="false"
                enableDeleteByPrimaryKey="false" enableInsert="false" enableSelectByExample="false"
                enableUpdateByExample="false" enableUpdateByPrimaryKey="false">
             <property name="useActualColumnNames" value="true"/>

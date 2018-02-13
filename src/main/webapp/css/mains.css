@@ -1,0 +1,149 @@
+@charset "utf-8";
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+    margin: 0;
+    padding: 0;
+}
+body{
+     
+}
+.wrap{
+    background-color:#ffffff;
+}
+
+.header{
+    padding: 15px 0;
+    height: 50px;
+    background: #da2413;
+    color: white;
+    text-align: center;
+}
+.logo{
+    width: 1000px;
+    height: 74px;
+    margin:0 auto;
+    border-bottom: 3px solid #da241c; 
+    margin-top:56px; 
+}
+.main{
+    width: 1000px;     /*这里总高为618px，总宽为1000px*/
+    height: 618px;   
+    border-bottom: 3px solid #e1e1e1;
+    margin:0 auto;
+  
+}
+.main-left{
+    padding:112px 0 0 91px ;
+    float: left;
+} 
+.main-right{
+   width: 332px;
+   height:330px;
+   border:  2px solid #e2e2e2;
+   float: left;      /*这里用left,然后设置左边的margin,不用right,不好维护*/
+   margin:80px 0 0 74px  ;
+ } 
+ .main-right h4{
+  font-size: 16px;
+  color: #3c3c3c;
+  margin: 23px 0 30px 24px;
+ } 
+ .username{
+  width: 240px;
+  height: 30px;
+  margin-left: 39px;
+ }
+ .username img{
+  float: left;
+ }
+ input.name{
+  width: 200px;
+  height: 30px;
+  float: left;
+  color: #b7b7b7;
+  margin-left: 8px;
+ }
+ .code{
+  width: 240px;
+  height: 30px;
+  margin-left: 39px;
+  margin-top: 20px;
+ }
+ .code img{
+  float: left;
+ }
+ 
+ .vcode{
+	 width: 240px;
+  height: 30px;
+  margin-left: 39px;
+  margin-top: 20px;
+ }
+  .vcode .vcodeleft{
+  float: left;
+ }
+ input.password{
+  width: 200px;
+  height: 30px;
+  float: left;
+  color: #b7b7b7;
+  margin-left: 8px;
+ }
+ 
+ input.validateCode{
+	  width: 100px;
+  height: 30px;
+  float: left;
+  color: #b7b7b7;
+  margin-left: 13px;
+ }
+ .reminder1{
+  width: 255px;
+  height: 15px;
+  margin:23px 0 0 28px;
+ }
+ .reminder1 span{
+  font-size: 12px;
+  color: #6d6d6d;
+ }
+ .reminder-left{
+  float: left;
+ }
+ .reminder-right{
+   float: right;
+ }
+ .button{
+  width: 260px;
+  height: 30px;
+  color: #fbfbfb;
+  background-color: #da2413;
+  margin-top: 10px;
+  margin-left: 28px;
+  border:1px solid #da2413;
+  border-radius: 3px;
+ }
+ .reminder2{
+  font-size: 12px;
+  margin:10px 0 0 30px;
+ }
+ .register{
+  color: #da241c;
+ }
+.footer{
+ 
+  height: 200px;
+}
+.site{
+  width: 100%;
+  height: 73px;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 56px;
+}
+.site h5{
+  color: #636363;
+  margin-bottom: 20px;
+}
+.site p{
+  color: #666666;
+ margin-bottom: 10px
+}

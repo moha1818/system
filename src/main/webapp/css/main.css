@@ -1,0 +1,164 @@
+body {
+	font-size: 14px;
+	font-family: "微软雅黑", Verdana, Geneva, sans-serif;
+	background-color:#A0DAF4;
+	background-image: url("../image/body_bg.jpg");
+	
+}
+
+.head {
+	height: 120px;
+	overflow: hidden;
+	color: #3f3f3f;
+	line-height: 20px;
+	/* background: url("../image/main/bg.gif") repeat-x; */
+}
+
+#shortcut {
+	height: 119px;
+	width: 1200px;
+	background: url("../image/bdbd.png") no-repeat;
+}
+
+#info {
+	margin-top: 10px;
+	float: right;
+	word-spacing: 8px;
+	letter-spacing: 1px;
+	font-weight: normal;
+	font-size: 16px;
+}
+
+#info a {
+	cursor: pointer;
+	color: #3f3f3f;
+	text-shadow: 0 1px 0 #fff;
+}
+
+#menu {
+	height: 36px;
+	line-height: 36px;
+	background: url("../image/main/bg.gif") repeat-x 0px -120px;
+}
+
+#menu ul {
+	width: 778px;
+	height: 32px;
+	line-height: 32px;
+	margin: 0 auto;
+}
+
+#menu li {
+	float: left;
+	width: 114px;
+	text-align: center;
+}
+
+#menu li:before {
+	content: url("../image/main/splite.gif");
+	width: 2px;
+	float: left;
+	padding-top:4px;
+	overflow: hidden;
+}
+
+#menu li:first-child:before {
+	content: " ";
+	width: 2px;
+	float: left;
+}
+
+#menu li a {
+	display: block;
+	color: #fff;
+	width: 114px;
+	height:36px;
+	line-height: 36px;
+}
+
+#menu li.current {
+	width: 120px;
+	text-align: center;
+	font-weight: bold;
+}
+
+#menu li.current:before {
+	content: " ";
+	width: 2px;
+	float: left;
+}
+
+#menu .current a {
+	display: block;
+	color: #0D4C6B;
+	width: 114px;
+	font-weight: bold;
+	background: url("../image/main/menu_bg.png") no-repeat;
+}
+
+.submenu {
+	height: 32px;
+	background: url("../image/main/bg.gif") repeat-x 0px -162px;
+	display: none;
+}
+
+.submenu .smenu {
+	width: 800px;
+	margin: 0px auto;
+	height: 32px;
+	display: none;
+}
+
+.submenu li {
+	line-height: 32px;
+	height: 32px;
+	float: left;
+}
+.smenu a {
+	color: #0D4C6B;
+	text-decoration: none;
+	padding: 5px 15px;
+	background: url("../image/main/splite.white.gif") no-repeat right center;
+}
+
+.submenu .smenu a:hover {
+	color: #ff0000;
+	text-decoration: none;
+}
+#mid-box{
+	height:60px;
+	color:#3f3f3f;
+}
+#main{
+	width:1300px;
+	min-height:450px;
+	margin:auto;
+	background-color:#FFFFFF;
+}
+
+#modify{
+	width:430px;
+	border:2px #0A86B8 solid;
+	background-color:#BFE5F7;
+	position:absolute;
+	margin-top:-125px;
+	margin-left:900px;
+	padding-left: 30px;
+}
+
+#modify tr{
+	height:30px;
+		
+}
+.pd{
+	color:#087DAF;
+}
+
+.pwdmsg{
+	color:red;
+}
+
+#navigation{
+	margin-left:115px; 
+	padding-top:20px;
+}
