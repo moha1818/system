@@ -7,8 +7,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>无标题文档</title>
-    <link type="text/css" rel="stylesheet" href="dist/css/zui.css" />
-    <link type="text/css" rel="stylesheet" href="dist/lib/dashboard/zui.dashboard.css" />
+    <link type="text/css" rel="stylesheet" href="/dist/css/zui.css" />
+    <link type="text/css" rel="stylesheet" href="/dist/lib/dashboard/zui.dashboard.css" />
 <style>
 body{
 	font-size:14px;
@@ -71,11 +71,11 @@ $('#detail').click(function(){
                         <th>操作时间</th>
                     </tr>
                     </thead>
-                    <s:forEach items="${logs}" var="list">
+                    <s:forEach items="${logs}" var="list" begin="0" end="7">
                         <tr>
                             <td>${list.userName}</td>
                             <td>${list.operateInfo}</td>
-                            <td>${list.operateDatetime}</td>
+                            <td>${list.operatedatetime}</td>
                         </tr>
                     </s:forEach>
                 </table>

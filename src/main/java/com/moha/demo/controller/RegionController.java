@@ -5,11 +5,12 @@ import com.moha.demo.entity.HatCity;
 import com.moha.demo.service.HatAreaService;
 import com.moha.demo.service.HatCityService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
-
+@Controller
 public class RegionController extends BaseController {
     @Autowired
     private HatCityService hatCityService;

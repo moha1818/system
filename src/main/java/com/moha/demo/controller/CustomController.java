@@ -4,6 +4,7 @@ import com.moha.demo.entity.*;
 import com.moha.demo.model.Page;
 import com.moha.demo.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -12,7 +13,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
-
+@Controller
 public class CustomController extends BaseController {
     @Autowired
     private AsCustomsService asCustomsService;
@@ -47,6 +48,7 @@ public class CustomController extends BaseController {
     }
     @RequestMapping(value = "/pageList")
     public String pageList() {
+        System.out.println("111");
         return "/custom/acustomer_manage";
     }
 
@@ -138,21 +140,6 @@ public class CustomController extends BaseController {
             e.printStackTrace();
             return "/custom/modify_customer";
         }
-    }
-
-    // 找市
-    @RequestMapping(value = "/city")
-    public List<HatCity> findcity(String provinceId) {
-
-        List<HatCity> citys = hatCityService.citys(provinceId);
-        return citys;
-    }
-
-    // 找区
-    @RequestMapping(value = "/area")
-    public  List<HatArea> findarea(String cityID) {
-        List<HatArea> areas = hatAreaService.areas(cityID);
-        return areas;
     }
 
 

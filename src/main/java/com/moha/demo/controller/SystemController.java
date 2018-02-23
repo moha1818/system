@@ -5,13 +5,14 @@ import com.moha.demo.entity.AsUser;
 import com.moha.demo.service.AsLogsService;
 import com.moha.demo.service.AsSystemconfigService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
-
+@Controller
 public class SystemController extends BaseController {
     @Autowired
     private AsSystemconfigService asSystemconfigService;

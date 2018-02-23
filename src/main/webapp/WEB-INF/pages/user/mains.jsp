@@ -6,12 +6,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>后台桌面</title>
-	<link type="text/css" rel="stylesheet" href="dist/css/zui.css" />
-	<link type="text/css" rel="stylesheet" href="css/static/metisMenu.min.css" />
-	<link type="text/css" rel="stylesheet" href="css/static/H-ui.min.css" />
-	<link type="text/css" rel="stylesheet" href="css/static/H-ui.admin.css" />
-	<link type="text/css" rel="stylesheet" href="css/static/skin.css" />
-	<link type="text/css" rel="stylesheet" href="css/static/iconfont.css" />
+	<link type="text/css" rel="stylesheet" href="/dist/css/zui.css" />
+	<link type="text/css" rel="stylesheet" href="/css/static/metisMenu.min.css" />
+	<link type="text/css" rel="stylesheet" href="/css/static/H-ui.min.css" />
+	<link type="text/css" rel="stylesheet" href="/css/static/H-ui.admin.css" />
+	<link type="text/css" rel="stylesheet" href="/css/static/skin.css" />
+	<link type="text/css" rel="stylesheet" href="/css/static/iconfont.css" />
 	<style>
 		table{
 			display:table;

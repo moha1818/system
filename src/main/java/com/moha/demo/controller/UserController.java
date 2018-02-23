@@ -70,7 +70,7 @@ public class UserController extends BaseController{
         }
         String info = "登录系统";
         asLogsService.addLogs(info,user);
-        return "redirect:/index";
+        return "redirect:/in";
     }
 
     @RequestMapping(value = "/loginOut")
@@ -97,6 +97,12 @@ public class UserController extends BaseController{
         return "redirect:/";
 
     }
+
+    @RequestMapping("/in")
+    public String in(){
+        return "/user/mains";
+    }
+
 
     //首页内嵌框架显示上次登录时间
     @RequestMapping(value = "/index")
