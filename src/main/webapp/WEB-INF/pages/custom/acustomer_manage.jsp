@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@taglib uri="/struts-tags" prefix="s"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -33,7 +33,7 @@ window.onload = function(){
 		$(window.parent.document).find('#n3').html('&#92;&nbsp;添加客户信息');
          })*/
 		
-	var page='<s:property value="#parameters.current"/>';
+	var page='${current}';
 	if(page==""){
 		page=1;
 	}
@@ -63,7 +63,7 @@ window.onload = function(){
 <body>
 	<form id="head1" action="pageList" method="get">
 		<span>客户名称：</span>
-		<s:textfield name="name" />
+        <input type="text" name="name" value="${name}">
 		<a class="btn btn-primary btn-mini sub" href="javascript:void(0);">查询</a>
 	</form>
 	<div id="u2">
@@ -201,7 +201,7 @@ window.onload = function(){
     <script type="text/javascript">
         $(function(){
             $("#table").bootstrapTable({
-                url: 'http://localhost:8888/html/page', //请求后台的URL（*）
+                url: 'http://localhost/pages', //请求后台的URL（*）
                 contentType: "application/x-www-form-urlencoded", //用post请求，这个是必须条件，必须加上，get可以不用，亲测
                 dataType: "json",
                 method: 'get', //请求方式（*）
@@ -221,7 +221,7 @@ window.onload = function(){
                 dataField:"list",
                 dataLevel:2,
                 columns: [
-                    {field: 'agentId',title: '奖励ID',align: "center"},
+                    {field: 'agentId',title: 'ID',align: "center"},
                     {field: 'agentCode',title: '订单类型',align: "center"},
                     {field: 'agentName',title: '买家公司名',align: "center"},
                     {field: 'regDatetime',title: '创建时间',align: "center"},
@@ -233,7 +233,7 @@ window.onload = function(){
         function queryParams(params) {
             var temp = { //这里的键的名字和控制器的变量名必须一致，这边改动，控制器也需要改成一样的
                 limit: params.limit, //页面大小
-                offset: params.offset, //页码
+                current: params.offset, //页码
                 portsName: $("#portsName").val(),
 
             };
@@ -283,11 +283,11 @@ window.onload = function(){
         }
     </script>
     </script>
-	<s:if test="cusPage.list.size()==0">
+	<c:if test="cusPage.list.size()==0">
 		<script type="text/javascript">
 			alert("请输入存在客户名称！");
 			location.href = "pageList";
 		</script>
-	</s:if>
+	</c:if>
 </body>
 </html>

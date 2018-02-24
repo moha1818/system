@@ -59,7 +59,7 @@
 				<td>省/地区：</td>
 				<td><s:select name="customs.province" id="province"
 						list="provinces" headerKey="-1" headerValue="——请选择省——"
-						listKey="provinceId" listValue="province" /><span><s:fielderror fieldName="customs.province"/></span></td>
+						listKey="provinceID" listValue="province" /><span><s:fielderror fieldName="customs.province"/></span></td>
 			</tr>
 			<tr>
 				<td>公司传真：</td>

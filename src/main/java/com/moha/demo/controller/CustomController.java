@@ -1,10 +1,12 @@
 package com.moha.demo.controller;
 
 import com.moha.demo.entity.*;
+import com.moha.demo.model.CustomsView;
 import com.moha.demo.model.Page;
 import com.moha.demo.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -27,19 +29,27 @@ public class CustomController extends BaseController {
     private HatCityService hatCityService;
     @Autowired
     private HatAreaService hatAreaService;
+    @Autowired
+    private AsSystemconfigService asSystemconfigService;
     @RequestMapping(value = "/add_cus")
-    public String show_add(){
+    public String show_add(Model model){
+        List<HatProvince> provinces = hatProvinceService.provinces();
+        List<AsSystemconfig> customTypes = asSystemconfigService.type(5, 1);
+        List<AsSystemconfig> cardTypes = asSystemconfigService.type(6, 1);
+        model.addAttribute("provinces",provinces);
+        model.addAttribute("customTypes",customTypes);
+        model.addAttribute("cardTypes",cardTypes);
         return "/custom/add_customer";
     }
 
     @RequestMapping(value = "/add",method = RequestMethod.POST)
-    public String add(AsCustoms customs, List<AsContacts> contacts) {
+    public String add(CustomsView customsView) {
         try {
             AsUser user = getCurrUser();
-            customs.setAgentCode(user.getUserCode());
-            customs.setAgentName(user.getUserName());
-            customs.setAgentId(user.getId());
-            asCustomsService.addCus(customs,contacts,user);
+            customsView.getCustoms().setAgentCode(user.getUserCode());
+            customsView.getCustoms().setAgentName(user.getUserName());
+            customsView.getCustoms().setAgentId(user.getId());
+            asCustomsService.addCus(customsView.getCustoms(),customsView.getContacts(),user);
             return "redirect:/pageList";
         } catch (Exception e) {
             e.printStackTrace();
@@ -48,7 +58,6 @@ public class CustomController extends BaseController {
     }
     @RequestMapping(value = "/pageList")
     public String pageList() {
-        System.out.println("111");
         return "/custom/acustomer_manage";
     }
 
@@ -56,7 +65,7 @@ public class CustomController extends BaseController {
     @ResponseBody
     public Page pages(Page cusPage,Integer current,String name,Integer limit) throws Exception {
         AsUser user = getCurrUser();
-        if (current == null) {
+        if (current == null || current == 0) {
             current = 1;
         }
         int pageSize = limit;

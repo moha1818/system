@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@taglib uri="/struts-tags" prefix="s"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -24,18 +24,24 @@
 						<div class="form-group mt-20">
 							<label class="col-sm-3 control-label requireds"><span class="text-danger">*</span>企业名称：</label>
 							<div class="col-sm-4">
-								<input type="text" name="customs.customName" value="<s:property value="customs.customName"/>" />
+								<input type="text" name="customs.customName" value="${customs.customName}" />
 								<span class="text-danger" data-valmsg-for="userName" data-valmsg-replace="true"></span>
 							</div>
 						</div>
 						<div class="form-group mt-20">
 							<label class="col-sm-3 control-label requireds"><span class="text-danger">*</span>企业类型：</label>
 							<div class="col-sm-4">
-								<s:select name="customs.customType" id="customType"
-										  list="customTypes" headerKey="-1" headerValue="——请选择类型——"
-										  listKey="configTypeValue" listValue="configTypeName"></s:select>
+								<select name="customs.customType" id="customType">
+									<option value='-1'>——请选择类型——</option>
+									<c:forEach var="temp" items="${customTypes}">
+										<option value='${temp.configTypeValue}' ${temp.configTypeValue==customs.customType?'selected':''}>
+												${temp.configTypeName}
+										</option>
+									</c:forEach>
+								</select>
+							<%--
 								<input type="hidden" name="customs.customTypeName"
-									   id="customTypeName" value="<s:property value="customs.customTypeName"/>"  />
+									   id="customTypeName" value="<s:property value="customs.customTypeName"/>"  />--%>
 								<span class="text-danger" data-valmsg-for="password" data-valmsg-replace="true"></span>
 							</div>
 						</div>
@@ -49,7 +55,10 @@
 						<div class="form-group mt-20">
 							<label class="col-sm-3 control-label requireds"><span class="text-danger">*</span>状态：</label>
 							<div class="col-sm-4">
-								<s:select list="#{'1':'启用','0':'停用'}" name="customs.customStatus"></s:select>
+								<select name="customs.customStatus">
+									<option value='1' ${customs.customStatus==1?'selected':''}>启用</option>
+									<option value='0' ${customs.customStatus==0?'selected':''}>停用</option>
+								</select>
 								<span class="text-danger" data-valmsg-for="passwordConfirm" data-valmsg-replace="true"></span>
 							</div>
 						</div>
@@ -60,7 +69,7 @@
 						<div class="form-group mt-20">
 							<label class="col-sm-3 control-label requireds"><span class="text-danger">*</span>法人代表：</label>
 							<div class="col-sm-4">
-								<input type="text" name="customs.bossName" value="<s:property value="customs.bossName"/>" />
+								<input type="text" name="customs.bossName" value="${customs.bossName}" />
 								<span class="text-danger" data-valmsg-for="enterpriseNameCN" data-valmsg-replace="true"></span>
 							</div>
 						</div>
@@ -74,9 +83,14 @@
 						<div class="form-group" id="regions">
 							<label class="col-sm-3 control-label requireds"><span class="text-danger">*</span>经营地址:</label>
 							<div class="col-sm-2">
-								<s:select name="customs.province" id="province"
-										  list="provinces" headerKey="-1" headerValue="——请选择省——"
-										  listKey="provinceId" listValue="province" />
+								<select name="customs.province" id="province">
+									<option value='-1'>——请选择省——</option>
+									<c:forEach var="temp" items="${provinces}">
+										<option value='${temp.provinceID}'>
+												${temp.province}
+										</option>
+									</c:forEach>
+								</select>
 							</div>
 							<div class="col-sm-2">
 								<select id="city" name="customs.city"><option
@@ -90,30 +104,36 @@
 						<div class="form-group">
 							<label class="col-sm-3">公司地址：</label>
 							<div class="col-sm-4">
-								<input type="text" name="customs.companyAddress" />
+								<input type="text" name="customs.companyAddress" value="${customs.companyAddress}"/>
 							</div>
 						</div>
 						<div class="form-group">
 							<label class="col-sm-3 ">注册日期：</label>
 							<div class="col-sm-4">
 								<input class="laydate-icon" id="demo"
-									   name="customs.regDatetime"><span><s:fielderror fieldName="customs.regDatetime"/>
+									   name="customs.regDatetime"value="${customs.regDatetime}"><span>
 							</div>
 						</div>
 						<div class="form-group">
 							<label class="col-sm-3 control-label"><span class="text-danger">*</span>证件类型：</label>
 							<div class="col-sm-4">
-								<s:select id="cardType" name="customs.cardType"
-										  list="cardTypes" headerKey="-1" headerValue="——请选择类型——"
-										  listKey="configTypeValue" listValue="configTypeName"></s:select> <input
-									type="hidden" name="customs.cardTypeName" id="cardTypeName" <s:property value="customs.cardTypeName"/>  />
+								<select name="customs.cardType" id="cardType">
+									<option value='-1'>——请选择类型——</option>
+									<c:forEach var="temp" items="${cardTypes}">
+										<option value='${temp.configTypeValue}' ${temp.configTypeValue==customs.customType?'selected':''}>
+												${temp.configTypeName}
+										</option>
+									</c:forEach>
+								</select>
+								<input
+									type="hidden" name="customs.cardTypeName" id="cardTypeName" value="${customs.cardTypeName}"/>
 							</div>
 						</div>
 
 						<div class="form-group">
 							<label class="col-sm-3 control-label requireds"><span class="text-danger">*</span>证件号码：</label>
 							<div class="col-sm-4">
-								<input type="text" name="customs.cardNum" value="<s:property value="customs.cardNum"/>" />
+								<input type="text" name="customs.cardNum" value="${customs.cardNum}"/>
 							</div>
 						</div>
 						<!--Enter Your Business Information-->
@@ -125,21 +145,21 @@
 						<div class="form-group">
 							<label class="col-sm-3 control-label requireds"><span class="text-danger">*</span>公司传真：</label>
 							<div class="col-sm-6">
-								<input type="text" name="customs.companyFax" value="<s:property value="customs.companyFax"/>" />
+								<input type="text" name="customs.companyFax" value="${customs.companyFax}"/>
 								<span class="text-danger" data-valmsg-for="contactCN" data-valmsg-replace="true"></span>
 							</div>
 						</div>
 						<div class="form-group">
 							<label class="col-sm-3 control-label requireds"><span class="text-danger">*</span>公司电话：</label>
 							<div class="col-sm-1">
-								<input type="text" name="customs.companyTel" value="<s:property value="customs.companyTel"/>"  />
+								<input type="text" name="customs.companyTel" value="${customs.companyTel}"  />
 							</div>
 						</div>
 
 						<div class="form-group">
 							<label class="col-sm-3 control-label"><span class="text-danger">*</span>公司邮箱：</label>
 							<div class="col-sm-4">
-								<input type="text" name="customs.email"/>
+								<input type="text" name="customs.email" value="${customs.email}" />
 								<span class="text-danger" data-valmsg-for="email" data-valmsg-replace="true"></span>
 							</div>
 						</div>

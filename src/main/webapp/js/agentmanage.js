@@ -139,7 +139,7 @@ function addcityList(str) {
 	empty('city', '市');
 	for (i = 0; i < str.length; i++) {
 		$("#city").append(
-				"<option value='" + str[i].cityID + "'>" + str[i].city
+				"<option value='" + str[i].cityid + "'>" + str[i].city
 						+ "</option>")
 	}
 
@@ -149,7 +149,7 @@ function addareaList(str) {
 	empty('area', '区');
 	for (i = 0; i < str.length; i++) {
 		$("#area").append(
-				"<option value='" + str[i].areaID + "'>" + str[i].area
+				"<option value='" + str[i].areaid + "'>" + str[i].area
 						+ "</option>")
 	}
 
