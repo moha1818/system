@@ -201,7 +201,7 @@ window.onload = function(){
     <script type="text/javascript">
         $(function(){
             $("#table").bootstrapTable({
-                url: 'http://localhost/pages', //请求后台的URL（*）
+                url: 'http://localhost:8080/pages', //请求后台的URL（*）
                 contentType: "application/x-www-form-urlencoded", //用post请求，这个是必须条件，必须加上，get可以不用，亲测
                 dataType: "json",
                 method: 'get', //请求方式（*）
@@ -211,7 +211,7 @@ window.onload = function(){
                 sortable: false, //是否启用排序
                 sortOrder: "asc", //排序方式
                 pagination: true,//显示分页
-                pageSize: 2,//默认分页数量
+                pageSize: 3,//默认分页数量
                 queryParamsType: "limit",
                 queryParams: queryParams, //传递参数（*）
                 sidePagination: 'server',//必选
@@ -233,7 +233,7 @@ window.onload = function(){
         function queryParams(params) {
             var temp = { //这里的键的名字和控制器的变量名必须一致，这边改动，控制器也需要改成一样的
                 limit: params.limit, //页面大小
-                current: params.offset, //页码
+                current: (params.offset/params.limit)+1, //页码
                 portsName: $("#portsName").val(),
 
             };
